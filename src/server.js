@@ -32,8 +32,8 @@ const init = async () => {
   const songsService = new SongsService();
   const usersService = new UsersService();
   const authenticationsService = new AuthenticationsService();
-  const playlistService = new PlaylistService();
   const collaborationsService = new CollaborationsService();
+  const playlistService = new PlaylistService(collaborationsService);
 
   const server = Hapi.server({
     port: process.env.PORT,
