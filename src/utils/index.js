@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 const mapDBToModel = ({
   id,
   title,
@@ -18,4 +19,24 @@ const mapDBToModel = ({
   updatedAt: updated_at,
 });
 
-module.exports = { mapDBToModel };
+const mapDBToPlaylist = ({
+  id,
+  name,
+  username,
+}) => ({
+  id,
+  name,
+  username,
+});
+
+const mapDBToPlaylistTest = ({
+  id,
+  name,
+  owner,
+}) => ({
+  id,
+  name,
+  owner,
+});
+
+module.exports = { mapDBToModel, mapDBToPlaylist, mapDBToPlaylistTest };
