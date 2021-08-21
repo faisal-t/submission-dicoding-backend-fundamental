@@ -4,7 +4,7 @@ exports.up = (pgm) => {
   // membuat table playlistsongs
   pgm.createTable('playlistsongs', {
     id: {
-      type: 'serial',
+      type: 'VARCHAR(50)',
       primaryKey: true,
     },
     playlist_id: {
@@ -24,5 +24,5 @@ exports.up = (pgm) => {
 };
 
 exports.down = (pgm) => {
-  pgm.dropTable('playlistsong');
+  pgm.dropTable('playlistsongs');
 };
